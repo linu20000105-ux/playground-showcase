@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>&#20114;&#21205;&#36938;&#20855;&#23637;&#31034;&#38913;</title>
+<meta name="description" content="&#20114;&#21205;&#36938;&#20855;&#23637;&#31034;&#33287;&#20171;&#32057;&#38913;&#38754;&#65292;&#25552;&#20379;&#21345;&#29255;&#28687;&#35261;&#12289;&#29031;&#29255;&#29128;&#31665;&#33287;&#24433;&#29255;&#31034;&#31684;&#12290;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="sun-deco"></div>
+  <h1>&#20114;&#21205;&#36938;&#20855;&#23637;&#31034;</h1>
+  <p>&#40670;&#36984;&#21345;&#29255;&#26597;&#30475;&#20171;&#32057;&#12289;&#29694;&#22580;&#29031;&#29255;&#33287;&#31034;&#31684;&#24433;&#29255;</p>
+</header>
+<div class="wood-stripe"></div>
+<div class="progress-wrap" aria-label="&#25506;&#32034;&#36914;&#24230;">
+  <span class="prog-label">&#25506;&#32034;&#36914;&#24230;</span>
+  <div class="prog-track" aria-hidden="true"><div class="prog-fill" id="progFill"></div></div>
+  <span class="prog-count" id="progCount" aria-live="polite">0 / 22</span>
+</div>
+<main class="grid-section">
+  <div class="grid" id="equipGrid" role="list"></div>
+</main>
+
+<div class="modal-overlay" id="overlay" aria-hidden="true">
+  <div class="modal" id="modalBox" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="modal-close" id="closeBtn" type="button" aria-label="&#38364;&#38281;&#20171;&#32057;&#35222;&#31383;">&times;</button>
+    <div class="modal-hero">
+      <img id="mHeroImg" src="" alt="">
+      <div class="hero-badge" id="mTag"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-title-wrap">
+        <h2 class="modal-title" id="mTitle"></h2>
+        <div class="modal-zhuyin" id="mZhuyin"></div>
+      </div>
+      <ul class="modal-bullets" id="mBullets"></ul>
+
+      <div class="photos-section" id="photosSection">
+        <div class="photos-label">&#29694;&#22580;&#29031;&#29255;</div>
+        <div class="photos-strip-wrap">
+          <div class="photos-strip" id="photosStrip"></div>
+        </div>
+      </div>
+
+      <div class="video-section" id="videoSection" style="display:none">
+        <div class="video-label-row">&#31034;&#31684;&#24433;&#29255;</div>
+        <div class="video-wrap" id="videoWrap"></div>
+      </div>
+
+      <button class="modal-back-btn" id="backBtn" type="button">&#36820;&#22238;&#36938;&#20855;&#21015;&#34920;</button>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" type="button" aria-label="&#38364;&#38281;&#29031;&#29255;&#29128;&#31665;">&times;</button>
+  <button class="lb-prev" id="lbPrev" type="button" aria-label="&#19978;&#19968;&#24373;&#29031;&#29255;">&lsaquo;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" id="lbNext" type="button" aria-label="&#19979;&#19968;&#24373;&#29031;&#29255;">&rsaquo;</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
