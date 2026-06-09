@@ -148,9 +148,10 @@ body.modal-open{overflow:hidden;}
 
 
 
+
 .card-name{display:block;line-height:1.2;}
 .card-name ruby,.modal-title ruby{
-  ruby-position:inter-character;
+  ruby-position:over;
   ruby-align:center;
 }
 .card-name rt,.modal-title rt{
@@ -160,4 +161,4 @@ body.modal-open{overflow:hidden;}
   letter-spacing:0;
 }
 .card-zhuyin,.modal-zhuyin{display:none;}
-.modal-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.modal-title{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;}
