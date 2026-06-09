@@ -1,39 +1,21 @@
-﻿const IMGS = {"r0c0": "images/r0c0.jpg", "r0c1": "images/r0c1.jpg", "r0c2": "images/r0c2.jpg", "r0c3": "images/r0c3.jpg", "r0c4": "images/r0c4.jpg", "r1c0": "images/r1c0.jpg", "r1c1": "images/r1c1.jpg", "r1c2": "images/r1c2.jpg", "r1c3": "images/r1c3.jpg", "r1c4": "images/r1c4.jpg", "r2c0": "images/r2c0.jpg", "r2c1": "images/r2c1.jpg", "r2c2": "images/r2c2.jpg", "r2c4": "images/r2c4.jpg", "r3c0": "images/r3c0.jpg", "r3c1": "images/r3c1.jpg", "r3c2": "images/r3c2.jpg", "r3c3": "images/r3c3.jpg", "r3c4": "images/r3c4.jpg", "r4c0": "images/r4c0.jpg", "r4c1": "images/r4c1.jpg", "r4c2": "images/r4c2.jpg"};
-const EQ = [{"id": 1, "key": "r0c0", "name": "?????祉雯", "tag": "??祈身??, "photos": ["r0c0", "r0c0", "r0c0"], "bullets": ["???祉雯???祆???祉?銝車", "?銝衣???質??斗?憿?, "銝甈⊥??唳??停銝?頞??嚗?, "?典?擃?蝜拍?蝮賡?8.7?砍偕"], "videoId": "dQw4w9WgXcQ", "videoLabel": "?????祉雯?敶梁?", "zhuyin": "??〩??? ? ?? ?具?"}, {"id": 2, "key": "r0c1", "name": "蝤函摮?皛０", "tag": "?喟絞閮剜", "photos": ["r0c1", "r0c1"], "bullets": ["?啁?砍???瑚誨銵冽抒??喟絞閮剜", "瘞渡ㄗ?單?鞈芾??批撥", "?⊿??嚗?皛漲??頞?, "餈僑敺拙憸冽蔭嚗??箸??∠暺?], "videoId": null, "zhuyin": "??? ???????????"}, {"id": 3, "key": "r0c2", "name": "?桀振摰園?", "tag": "閫?格?", "photos": ["r0c2", "r0c2"], "bullets": ["瞈?澆?蝡亙??鞊??喳???, "閮剜?璅⊥撱?頃?拙????, "?寥?蝷曆漱鈭???閮皞??, "?拙?2??甇脣?蝡乩蝙??], "videoId": null, "zhuyin": "?? ????????﹌?}, {"id": 4, "key": "r0c3", "name": "蝧寧蕨??, "tag": "鈭??", "photos": ["r0c3", "r0c3", "r0c3"], "bullets": ["??拐犖??鈭箏?雿?撽??像銵?, "敶飢蝺抵?閮剛?嚗?霅琿?蝭摰", "???詨??黎??函??澆?", "??憭?嚗??拇狡?蔗?寞狡"], "videoId": null, "zhuyin": "????????"}, {"id": 5, "key": "r0c4", "name": "??憌憚", "tag": "??憿?, "photos": ["r0c4", "r0c4"], "bullets": ["憭批????憌憚閮剜", "蝡???憪輻??臭???, "閮毀?刻澈?矽?賢??像銵⊥?", "?潛揣?舀?蝯?摰?"], "videoId": null, "zhuyin": "??〩???〩??? ????}, {"id": 6, "key": "r1c0", "name": "??撟唾﹛??, "tag": "撟唾﹛閮毀", "photos": ["r1c0", "r1c0"], "bullets": ["閮毀頨恍?撟唾﹛????隤輯??, "?刻ˊ璈急?擃漲蝝?0??0?砍?", "?拙?撟澆??飛朣∪??咱", "?舀?????歲璅??蝙??], "videoId": null, "zhuyin": "?扼?? ??瓦???瓦??? ??"}, {"id": 7, "key": "r1c1", "name": "??祆", "tag": "??祈身??, "photos": ["r1c1", "r1c1", "r1c1"], "bullets": ["憭?潛恣??祆??嗥?瑽?, "???刻澈?矽?賢?????", "?航身閮?蝔桅摨西楝蝺?, "撱箄降6甇脖誑銝?蝡乩蝙??], "videoId": null, "zhuyin": "? ?? ???}, {"id": 8, "key": "r1c2", "name": "皞揣", "tag": "?漲?", "photos": ["r1c2", "r1c2"], "bullets": ["?嗥征皛??潛揣嚗漲?撥??, "?潛揣?瑕漲?舫?15??5?砍偕", "憭折翩?咱????箸?閮剜", "?閮剔蔭摰蝺抵??賢?"], "videoId": null, "zhuyin": "??????}, {"id": 9, "key": "r1c3", "name": "皛?", "tag": "?漲?", "photos": ["r1c3", "r1c3"], "bullets": ["?嗥征撘蝞⊥??頠?, "閮毀銝?∪?????", "?瑕漲蝝?0??0?砍偕?臬恥鋆?, "?圈??芾身璈∟??脰風憓?], "videoId": null, "zhuyin": "??????}, {"id": 10, "key": "r1c4", "name": "蝞∠?皞?璇?, "tag": "皛０", "photos": ["r1c4", "r1c4", "r1c4"], "bullets": ["?典??恣?閮剛?摰??", "?暹?閫漲25??5摨?, "?澆?漲???ａ璅閎", "?拙?5甇脖誑銝?蝡?], "videoId": null, "zhuyin": "??〩???卞????????"}, {"id": 11, "key": "r2c0", "name": "?喲??脫?", "tag": "???", "photos": ["r2c0", "r2c0"], "bullets": ["銝??撅祇蝞⊥憭璅?撽?, "???咱?單??????, "?⊥憭瞍?鋆?, "?典僑朣∪惜??蝙??], "videoId": null, "zhuyin": "?扼 ????????"}, {"id": 12, "key": "r2c1", "name": "敶歲摨?, "tag": "敶歲閮剜", "photos": ["r2c1", "r2c1", "r2c1"], "bullets": ["擃??批??Ｘ??歲頨???, "?圈撋撘身閮?蝺?摰", "閮毀銝???歲頨?憟?", "?拙??典僑朣∪惜"], "videoId": null, "zhuyin": "?? ?????卞?}, {"id": 13, "key": "r2c2", "name": "??憛?, "tag": "??憿?, "photos": ["r2c2", "r2c2"], "bullets": ["憭惜??撟喳銴?閮剛?", "銝?擃漲撣嗡?銝?閬?擃?", "閮毀?滬閬箄?蝛粹?隤", "瘜冽?頧???雿輻鈭箸"], "videoId": null, "zhuyin": "??〩???〩????"}, {"id": 14, "key": "r2c4", "name": "蝜拍雯?賜?", "tag": "??祈身??, "photos": ["r2c4", "r2c4", "r2c4"], "bullets": ["蝡??潭?剝?蝜拍雯閮剛?", "憭???頝臬??芰?Ｙ揣", "閮毀蝛粹?隤???砍?隤?, "?拙?4??2甇脣?蝡?], "videoId": null, "zhuyin": "?? ?具? ?????瓦?}, {"id": 15, "key": "r3c0", "name": "??芸之蝝?, "tag": "??祈身??, "photos": ["r3c0", "r3c0"], "bullets": ["憭批???蝜拍揣銴?閮剜", "閮毀銝?∪??敹帘摰?, "擃漲?臭??游?瘙矽??, "撱箄降8甇脖誑銝?蝡乩蝙??], "videoId": null, "zhuyin": "? ?? ??? ???}, {"id": 16, "key": "r3c1", "name": "????, "tag": "??憿?, "photos": ["r3c1", "r3c1"], "bullets": ["?耦???文3??鈭箏?????, "銝剖?頠豢閮剛?靽?瘚??", "閮毀?滬閬箏?撟唾﹛?", "?釣?蝙?其犖?貉?頧???], "videoId": null, "zhuyin": "??〩???〩???"}, {"id": 17, "key": "r3c2", "name": "蝯??B", "tag": "蝬???, "photos": ["r3c2", "r3c2", "r3c2"], "bullets": ["銝剖?蝯??嚗?冗??砍?", "?急?皛０?璇臬??蝜拚?隞?, "摰??Ｙ?蝝??6?砍偕", "??CNS 12642摰隤?"], "videoId": null, "zhuyin": "?? ??? ?扼? ?? B"}, {"id": 18, "key": "r3c3", "name": "蝯??A", "tag": "蝬???, "photos": ["r3c3", "r3c3"], "bullets": ["蝬甈曉???????, "?怠像?啜?璇臬???砍???, "?拙?撟澆???蝷曉?雿輻", "?脣蔗擙株?嚗撘匱蝡交釣??], "videoId": null, "zhuyin": "?? ??? ?扼? ?? A"}, {"id": 19, "key": "r3c4", "name": "蝯??C", "tag": "蝬???, "photos": ["r3c4", "r3c4", "r3c4"], "bullets": ["?孵之????蝯?", "?游??折???憓押?撗拍?", "?拙?銝?撟湧翩撅文??雿輻", "蝚血?EN1176??摰閬?"], "videoId": null, "zhuyin": "?? ??? ?扼? ?? C"}, {"id": 20, "key": "r4c0", "name": "璇璅像銵⊥", "tag": "撟唾﹛閮毀", "photos": ["r4c0", "r4c0"], "bullets": ["擃??航???望????閮剛?", "閮毀頝唾??賢??暺??, "憭車????銝???漲", "?拙?4??2甇脣?蝡乩蝙??], "videoId": null, "zhuyin": "??? ????????瓦??? ??"}, {"id": 21, "key": "r4c1", "name": "?????, "tag": "??", "photos": ["r4c1", "r4c1"], "bullets": ["餈瑕悅????蝑??粹??, "閮毀??矽??瘜典?", "????拙?憭犖??鈭?", "?典予?憭身閮?], "videoId": null, "zhuyin": "?? ??瓦??扼? ?? ??"}, {"id": 22, "key": "r4c2", "name": "?阡?", "tag": "?阡?", "photos": ["r4c2", "r4c2", "r4c2"], "bullets": ["璅?摨批??阡?擃漲2.3??.5?砍偕", "璈∟?摨扳?戭啣???霅瑟?", "閮毀?詨?撟唾﹛??敺??憟?, "摰?賢???芾身璈∟??啣?"], "videoId": null, "zhuyin": "??????}];
+const IMGS = {"r0c0": "images/r0c0.jpg", "r0c1": "images/r0c1.jpg", "r0c2": "images/r0c2.jpg", "r0c3": "images/r0c3.jpg", "r0c4": "images/r0c4.jpg", "r1c0": "images/r1c0.jpg", "r1c1": "images/r1c1.jpg", "r1c2": "images/r1c2.jpg", "r1c3": "images/r1c3.jpg", "r1c4": "images/r1c4.jpg", "r2c0": "images/r2c0.jpg", "r2c1": "images/r2c1.jpg", "r2c2": "images/r2c2.jpg", "r2c4": "images/r2c4.jpg", "r3c0": "images/r3c0.jpg", "r3c1": "images/r3c1.jpg", "r3c2": "images/r3c2.jpg", "r3c3": "images/r3c3.jpg", "r3c4": "images/r3c4.jpg", "r4c0": "images/r4c0.jpg", "r4c1": "images/r4c1.jpg", "r4c2": "images/r4c2.jpg"};
+const EQ = [{"id": 1, "key": "r0c0", "name": "連續攀爬網", "tag": "攀爬設備", "photos": ["r0c0", "r0c0", "r0c0"], "bullets": ["分為攀爬網、攀爬架、攀爬牆三種", "手腦並用、體能與判斷力兼顧", "一次挑戰成功就不有趣了！", "全台最高攀繩組總高8.7公尺"], "videoId": "dQw4w9WgXcQ", "videoLabel": "連續攀爬網挑戰影片", "zhuyin": "ㄌㄧㄢˊ ㄒㄩˋ ㄆㄢ ㄆㄚ ㄨㄤˇ"}, {"id": 2, "key": "r0c1", "name": "磨石子溜滑梯", "tag": "傳統設施", "photos": ["r0c1", "r0c1"], "bullets": ["台灣公園最具代表性的傳統設施", "水磨石材質耐久性強", "坡面光滑，下滑速度感十足", "近年復古風潮，成為打卡熱點"], "videoId": null, "zhuyin": "ㄇㄛˊ ㄕˊ ㄗˇ ㄌㄧㄡ ㄏㄨㄚˊ ㄊㄧ"}, {"id": 3, "key": "r0c2", "name": "扮家家酒", "tag": "角色扮演", "photos": ["r0c2", "r0c2"], "bullets": ["激發兒童創意與豐富想像力", "設有模擬廚房、購物台及窗戶", "培養社交互動與語言溝通能力", "適合2–8歲兒童使用"], "videoId": null, "zhuyin": "ㄅㄢˋ ㄐㄧㄚ ㄐㄧㄚ ㄐㄧㄡˇ"}, {"id": 4, "key": "r0c3", "name": "翹翹板", "tag": "互動遊戲", "photos": ["r0c3", "r0c3", "r0c3"], "bullets": ["需兩人或多人合作體驗重力平衡", "彈簧緩衝設計，保護關節安全", "鍛鍊核心肌群與腿部爆發力", "造型多元：動物款、彩虹款"], "videoId": null, "zhuyin": "ㄑㄧㄠˋ ㄑㄧㄠˋ ㄅㄢˇ"}, {"id": 5, "key": "r0c4", "name": "旋轉飛輪", "tag": "旋轉類", "photos": ["r0c4", "r0c4"], "bullets": ["大型圓盤旋轉飛輪設施", "站立或坐姿皆可乘坐", "訓練全身協調能力與平衡感", "鋼索支撐結構安全耐用"], "videoId": null, "zhuyin": "ㄒㄩㄢˊ ㄓㄨㄢˇ ㄈㄟ ㄌㄨㄣˊ"}, {"id": 6, "key": "r1c0", "name": "搖動平衡木", "tag": "平衡訓練", "photos": ["r1c0", "r1c0"], "bullets": ["訓練身體平衡與動態協調能力", "木製橫梁高度約30–50公分", "適合幼兒及學齡前兒童", "可搭配搖搖橋、跳樁組合使用"], "videoId": null, "zhuyin": "ㄧㄠˊ ㄉㄨㄥˋ ㄆㄧㄥˊ ㄏㄥˊ ㄇㄨˋ"}, {"id": 7, "key": "r1c1", "name": "攀爬架", "tag": "攀爬設備", "photos": ["r1c1", "r1c1", "r1c1"], "bullets": ["多格鋼管攀爬框架結構", "鍛鍊全身協調能力與肌耐力", "可設計多種難度路線", "建議6歲以上兒童使用"], "videoId": null, "zhuyin": "ㄆㄢ ㄆㄚ ㄐㄧㄚˋ"}, {"id": 8, "key": "r1c2", "name": "溜索", "tag": "速度挑戰", "photos": ["r1c2", "r1c2"], "bullets": ["架空滑行鋼索，速度感強烈", "鋼索長度可達15–25公尺", "大齡兒童最愛的刺激設施", "需設置安全緩衝落地區"], "videoId": null, "zhuyin": "ㄌㄧㄡ ㄙㄨㄛˇ"}, {"id": 9, "key": "r1c3", "name": "滑軌", "tag": "速度挑戰", "photos": ["r1c3", "r1c3"], "bullets": ["架空式鋼管懸掛滑軌", "訓練上肢握力與手臂耐力", "長度約10–20公尺可客製", "地面需鋪設橡膠防護墊"], "videoId": null, "zhuyin": "ㄏㄨㄚˊ ㄍㄨㄟˇ"}, {"id": 10, "key": "r1c4", "name": "管狀溜滑梯", "tag": "滑梯", "photos": ["r1c4", "r1c4", "r1c4"], "bullets": ["全封閉管狀設計安全感高", "傾斜角度25–35度", "兼具速度感與探險樂趣", "適合5歲以上兒童"], "videoId": null, "zhuyin": "ㄍㄨㄢˇ ㄓㄨㄤˋ ㄌㄧㄡ ㄏㄨㄚˊ ㄊㄧ"}, {"id": 11, "key": "r2c0", "name": "音階敲擊", "tag": "感官遊戲", "photos": ["r2c0", "r2c0"], "bullets": ["七音階金屬音管戶外音樂體驗", "開啟兒童音樂啟蒙與創意", "採戶外耐候烤漆塗裝", "全年齡層皆適合使用"], "videoId": null, "zhuyin": "ㄧㄣ ㄐㄧㄝ ㄑㄧㄠ ㄐㄧˊ"}, {"id": 12, "key": "r2c1", "name": "彈跳床", "tag": "彈跳設施", "photos": ["r2c1", "r2c1", "r2c1"], "bullets": ["高彈性床面提升跳躍體能", "地面嵌入式設計邊緣更安全", "訓練下肢肌力與跳躍節奏感", "適合全年齡層"], "videoId": null, "zhuyin": "ㄊㄢˊ ㄊㄧㄠˋ ㄔㄨㄤˊ"}, {"id": 13, "key": "r2c2", "name": "旋轉塔", "tag": "旋轉類", "photos": ["r2c2", "r2c2"], "bullets": ["多層旋轉平台複合設計", "不同高度帶來不同視角體驗", "訓練前庭覺與空間認知", "注意轉速與同時使用人數"], "videoId": null, "zhuyin": "ㄒㄩㄢˊ ㄓㄨㄢˇ ㄊㄚˇ"}, {"id": 14, "key": "r2c4", "name": "繩網鑽籠", "tag": "攀爬設備", "photos": ["r2c4", "r2c4", "r2c4"], "bullets": ["立體鋼架搭配繩網設計", "多入口、多路徑自由探索", "訓練空間認知與攀爬協調", "適合4–12歲兒童"], "videoId": null, "zhuyin": "ㄕㄥˊ ㄨㄤˇ ㄗㄨㄢ ㄌㄨㄥˊ"}, {"id": 15, "key": "r3c0", "name": "攀盪大索", "tag": "攀爬設備", "photos": ["r3c0", "r3c0"], "bullets": ["大型垂吊繩索複合設施", "訓練上肢握力與核心穩定", "高度可依場地需求調整", "建議8歲以上兒童使用"], "videoId": null, "zhuyin": "ㄆㄢ ㄉㄤˋ ㄉㄚˋ ㄙㄨㄛˇ"}, {"id": 16, "key": "r3c1", "name": "旋轉盤", "tag": "旋轉類", "photos": ["r3c1", "r3c1"], "bullets": ["圓形旋轉盤可3–8人同時乘坐", "中心軸承設計保持流暢旋轉", "訓練前庭覺及平衡感知", "須注意使用人數與轉速安全"], "videoId": null, "zhuyin": "ㄒㄩㄢˊ ㄓㄨㄢˇ ㄆㄢˊ"}, {"id": 17, "key": "r3c2", "name": "組合遊具B", "tag": "綜合型", "photos": ["r3c2", "r3c2", "r3c2"], "bullets": ["中型組合遊具，適合社區公園", "含溜滑梯、爬梯及攀繩配件", "安裝面積約6×6公尺", "通過CNS 12642安全認證"], "videoId": null, "zhuyin": "ㄗㄨˇ ㄏㄜˊ ㄧㄡˊ ㄐㄩˋ B"}, {"id": 18, "key": "r3c3", "name": "組合遊具A", "tag": "綜合型", "photos": ["r3c3", "r3c3"], "bullets": ["經典款入門型組合遊具", "含平台、滑梯及攀爬功能", "適合幼兒園與社區使用", "色彩鮮豔，吸引幼童注意"], "videoId": null, "zhuyin": "ㄗㄨˇ ㄏㄜˊ ㄧㄡˊ ㄐㄩˋ A"}, {"id": 19, "key": "r3c4", "name": "組合遊具C", "tag": "綜合型", "photos": ["r3c4", "r3c4", "r3c4"], "bullets": ["特大型多功能遊具組合", "整合隧道、橋墩、攀岩牆", "適合不同年齡層分區使用", "符合EN1176國際安全規範"], "videoId": null, "zhuyin": "ㄗㄨˇ ㄏㄜˊ ㄧㄡˊ ㄐㄩˋ C"}, {"id": 20, "key": "r4c0", "name": "梅花樁平衡木", "tag": "平衡訓練", "photos": ["r4c0", "r4c0"], "bullets": ["高低錯落的梅花樁陣列設計", "訓練跳躍能力與落點判斷", "多種間距提供不同難度", "適合4–12歲兒童使用"], "videoId": null, "zhuyin": "ㄇㄟˊ ㄏㄨㄚ ㄓㄨㄤ ㄆㄧㄥˊ ㄏㄥˊ ㄇㄨˋ"}, {"id": 21, "key": "r4c1", "name": "手動遊戲版", "tag": "益智遊戲", "photos": ["r4c1", "r4c1"], "bullets": ["迷宮、連連看等益智面板", "訓練手眼協調與專注力", "靜態遊具適合多人圍聚互動", "全天候戶外耐候設計"], "videoId": null, "zhuyin": "ㄕㄡˇ ㄉㄨㄥˋ ㄧㄡˊ ㄒㄧˋ ㄅㄢˇ"}, {"id": 22, "key": "r4c2", "name": "鞦韆", "tag": "鞦韆", "photos": ["r4c2", "r4c2", "r4c2"], "bullets": ["標準座式鞦韆高度2.3–2.5公尺", "橡膠座椅嬰兒型附護欄", "訓練核心平衡與前後擺動節奏", "安全落地區需鋪設橡膠地墊"], "videoId": null, "zhuyin": "ㄑㄧㄡ ㄑㄧㄢ"}];
 const TOTAL = EQ.length;
-const STORAGE_KEY = 'playground_v9_visited';
 const visited = new Set();
-let lastTrigger = null;
 const grid = document.getElementById('equipGrid');
-try {
-  const savedVisited = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-  if (Array.isArray(savedVisited)) savedVisited.forEach(id => visited.add(id));
-} catch (error) {
-  console.warn('visited state restore failed', error);
-}
 
 // build grid
 EQ.forEach(eq => {
   const card = document.createElement('div');
   card.className = 'card';
   card.dataset.id = eq.id;
-  card.setAttribute('role', 'button');
-  card.setAttribute('tabindex', '0');
-  card.setAttribute('aria-label', `${eq.name} \u8a73\u7d30\u4ecb\u7d39`);
-  if (visited.has(eq.id)) card.classList.add('visited');
   card.innerHTML = `
     <div class="card-img"><img src="${IMGS[eq.key]}" alt="${eq.name}" loading="lazy"></div>
     <div class="card-label">
       <span class="card-name">${eq.name}</span>
       <span class="card-zhuyin">${eq.zhuyin}</span>
     </div>`;
-  card.addEventListener('click', () => openModal(eq.id, card));
-  card.addEventListener('keydown', event => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      openModal(eq.id, card);
-    }
-  });
+  card.addEventListener('click', () => openModal(eq.id));
   grid.appendChild(card);
 });
 
@@ -43,26 +25,22 @@ function updateProgress(){
   document.getElementById('progCount').textContent = visited.size + ' / ' + TOTAL;
 }
 
-// ?? lightbox state ??
+// ── lightbox state ──
 let _lbPhotos = [], _lbIdx = 0;
 
 function openLightbox(photos, idx) {
   _lbPhotos = photos; _lbIdx = idx;
   renderLightbox();
   document.getElementById('lightbox').classList.add('open');
-  document.getElementById('lightbox').setAttribute('aria-hidden', 'false');
-  document.body.classList.add('modal-open');
-  document.getElementById('lbClose').focus();
+  document.body.style.overflow = 'hidden';
 }
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('open');
-  document.getElementById('lightbox').setAttribute('aria-hidden', 'true');
-  if (!document.getElementById('overlay').classList.contains('open')) {
-    document.body.classList.remove('modal-open');
-  } else {
-    document.body.classList.add('modal-open');
-    document.getElementById('closeBtn').focus();
-  }
+  // restore body scroll only if modal is still open
+  if (!document.getElementById('overlay').classList.contains('open'))
+    document.body.style.overflow = '';
+  else
+    document.body.style.overflow = 'hidden';
 }
 function renderLightbox() {
   document.getElementById('lbImg').src = _lbPhotos[_lbIdx];
@@ -74,9 +52,12 @@ document.getElementById('lbClose').addEventListener('click', closeLightbox);
 document.getElementById('lbPrev').addEventListener('click', () => { if(_lbIdx>0){ _lbIdx--; renderLightbox(); }});
 document.getElementById('lbNext').addEventListener('click', () => { if(_lbIdx<_lbPhotos.length-1){ _lbIdx++; renderLightbox(); }});
 document.getElementById('lightbox').addEventListener('click', e => { if(e.target===document.getElementById('lightbox')) closeLightbox(); });
-// ?? ?萇 / 蝪∪蝑????
-// ???摩嚗?//   ?格? ??/ ?? = 蝘餃?擃漁嚗?梯歲?賂?
-//   ?? ??     = ???桀?擃漁???400ms ?折???拐?嚗?//   Esc         = Modal ???????”??瘨?鈭?let _focusIdx = -1;
+// ── 鍵盤 / 簡報筆控制 ──
+// 操作邏輯：
+//   單按 → / ←  = 移動高亮（自由跳選）
+//   雙擊 →      = 開啟目前高亮的卡片（400ms 內連按兩下）
+//   Esc         = Modal 開啟時關閉；列表時取消高亮
+let _focusIdx = -1;
 let _lastRightTime = 0;
 let _lastFocusBeforeMove = -1;
 
@@ -119,11 +100,12 @@ document.addEventListener('keydown', e => {
     _lastRightTime = now;
 
     if (gap < 400 && _lastFocusBeforeMove >= 0) {
-      // ??嚗??洵銝銝?銋???函???
+      // 雙擊：開啟第一下按之前所在的那格
       _lastRightTime = 0;
       openModal(parseInt(cards[_lastFocusBeforeMove].dataset.id));
     } else {
-      // ?格?嚗?雿??蝵殷????喟宏銝??      _lastFocusBeforeMove = _focusIdx;
+      // 單擊：記住目前位置，再往右移一格
+      _lastFocusBeforeMove = _focusIdx;
       setFocus(_focusIdx < total - 1 ? _focusIdx + 1 : 0);
     }
   }
@@ -137,9 +119,8 @@ document.addEventListener('keydown', e => {
 
   if (e.key === 'Escape') { setFocus(-1); _lastRightTime = 0; _lastFocusBeforeMove = -1; }
 });
-// ?? modal ??
-function openModal(id, trigger = null) {
-  lastTrigger = trigger;
+// ── modal ──
+function openModal(id) {
   const eq = EQ.find(e => e.id === id);
 
   // hero
@@ -157,17 +138,8 @@ function openModal(id, trigger = null) {
   eq.photos.forEach((k, i) => {
     const item = document.createElement('div');
     item.className = 'photo-item';
-    item.setAttribute('role', 'button');
-    item.setAttribute('tabindex', '0');
-    item.setAttribute('aria-label', `\u958b\u555f\u7b2c ${i + 1} \u5f35\u7167\u7247`);
-    item.innerHTML = `<img src="${IMGS[k]}" alt="\u7167\u7247 ${i + 1}" loading="lazy" decoding="async">`;
+    item.innerHTML = `<img src="${IMGS[k]}" alt="照片${i+1}" loading="lazy">`;
     item.addEventListener('click', () => openLightbox(photoSrcs, i));
-    item.addEventListener('keydown', event => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        openLightbox(photoSrcs, i);
-      }
-    });
     strip.appendChild(item);
   });
   strip.scrollLeft = 0;
@@ -176,7 +148,7 @@ function openModal(id, trigger = null) {
   const vs = document.getElementById('videoSection');
   const vw = document.getElementById('videoWrap');
   if (eq.videoId) {
-    vw.innerHTML = `<iframe src="https://www.youtube.com/embed/${eq.videoId}?rel=0" title="${eq.name} \u793a\u7bc4\u5f71\u7247" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    vw.innerHTML = `<iframe src="https://www.youtube.com/embed/${eq.videoId}?rel=0" allowfullscreen></iframe>`;
     vs.style.display = 'block';
   } else {
     vw.innerHTML = '';
@@ -184,10 +156,8 @@ function openModal(id, trigger = null) {
   }
 
   document.getElementById('overlay').classList.add('open');
-  document.getElementById('overlay').setAttribute('aria-hidden', 'false');
   document.getElementById('modalBox').scrollTop = 0;
-  document.body.classList.add('modal-open');
-  document.getElementById('closeBtn').focus();
+  document.body.style.overflow = 'hidden';
   window._cid = id;
 }
 
@@ -196,19 +166,12 @@ function closeModal() {
   document.getElementById('videoWrap').innerHTML = '';
   if (window._cid) {
     visited.add(window._cid);
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify([...visited]));
-    } catch (error) {
-      console.warn('visited state save failed', error);
-    }
     document.querySelector(`.card[data-id="${window._cid}"]`)?.classList.add('visited');
     updateProgress();
   }
   document.getElementById('overlay').classList.remove('open');
-  document.getElementById('overlay').setAttribute('aria-hidden', 'true');
-  if (!isLightboxOpen()) document.body.classList.remove('modal-open');
-  if (lastTrigger) lastTrigger.focus();
-  // ??敺??鈭桐?銝撘蛛?霈陛?梁??臭誑?湔 ????
+  document.body.style.overflow = '';
+  // 關閉後自動高亮下一張，讓簡報筆可以直接 → 開啟
   const cards = [...document.querySelectorAll('.card')];
   const nextIdx = _focusIdx + 1 < cards.length ? _focusIdx + 1 : -1;
   window._cid = null;
@@ -221,4 +184,3 @@ document.getElementById('backBtn').addEventListener('click', closeModal);
 document.getElementById('overlay').addEventListener('click', e => { if(e.target===document.getElementById('overlay')) closeModal(); });
 
 updateProgress();
-
