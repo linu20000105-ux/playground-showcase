@@ -4,6 +4,16 @@ const TOTAL = EQ.length;
 const visited = new Set();
 const grid = document.getElementById('equipGrid');
 
+
+function renderZhuyinRuby(text, zhuyin) {
+  const chars = Array.from(text || '');
+  const notes = (zhuyin || '').trim().split(/\s+/).filter(Boolean);
+  if (!chars.length || chars.length !== notes.length) {
+    return text || '';
+  }
+  return chars.map((char, index) => `<ruby>${char}<rt>${notes[index]}</rt></ruby>`).join('');
+}
+
 // build grid
 EQ.forEach(eq => {
   const card = document.createElement('div');
@@ -12,10 +22,16 @@ EQ.forEach(eq => {
   card.innerHTML = `
     <div class="card-img"><img src="${IMGS[eq.key]}" alt="${eq.name}" loading="lazy"></div>
     <div class="card-label">
-      <span class="card-name">${eq.name}</span>
-      <span class="card-zhuyin">${eq.zhuyin}</span>
+      <span class="card-name">${renderZhuyinRuby(eq.name, eq.zhuyin)}</span>
     </div>`;
   card.addEventListener('click', () => openModal(eq.id));
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openModal(eq.id);
+    }
+  });
+  card.tabIndex = 0;
   grid.appendChild(card);
 });
 
@@ -127,8 +143,8 @@ function openModal(id) {
   document.getElementById('mHeroImg').src = IMGS[eq.key];
   document.getElementById('mHeroImg').alt = eq.name;
   document.getElementById('mTag').textContent = eq.tag;
-  document.getElementById('mTitle').textContent = eq.name;
-  document.getElementById('mZhuyin').textContent = eq.zhuyin;
+  document.getElementById('mTitle').innerHTML = renderZhuyinRuby(eq.name, eq.zhuyin);
+  document.getElementById('mZhuyin').textContent = '';
   document.getElementById('mBullets').innerHTML = eq.bullets.map(b => `<li>${b}</li>`).join('');
 
   // photo strip
