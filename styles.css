@@ -150,16 +150,28 @@ body.modal-open{overflow:hidden;}
 
 
 
-.card-name{display:block;line-height:1.2;}
-.card-name ruby,.modal-title ruby{
-  ruby-position:inter-character;
-  ruby-align:center;
+
+.card-name{display:block;line-height:1.25;}
+.zy-char{
+  position:relative;
+  display:inline-block;
+  padding-right:.78em;
+  margin-right:.04em;
 }
-.card-name rt,.modal-title rt{
+.zy-note{
+  position:absolute;
+  right:0;
+  top:50%;
+  transform:translate(18%,-50%);
+  writing-mode:vertical-rl;
+  text-orientation:upright;
   font-family:"??????? Regular","BopomofoRuby1909-Regular","Noto Sans TC",sans-serif;
-  font-size:.56em;
+  font-size:.44em;
   line-height:1;
   letter-spacing:0;
+  white-space:nowrap;
 }
 .card-zhuyin,.modal-zhuyin{display:none;}
-.modal-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.modal-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap;line-height:1.3;}
+.modal-title .zy-char{padding-right:.9em;margin-right:.06em;}
+.modal-title .zy-note{font-size:.5em;}
