@@ -35,7 +35,7 @@ header p{position:relative;z-index:1;color:var(--yellow3);font-size:.9rem;margin
 .card-label{padding:5px 4px 6px;background:var(--yellow3);border-top:2px solid var(--brown3);text-align:center;line-height:1.25;}
 .card-name{font-size:.72rem;font-weight:900;color:var(--brown);letter-spacing:.3px;display:block;}
 .card-zhuyin{font-size:.56rem;color:var(--brown2);letter-spacing:.4px;display:block;margin-top:1px;opacity:.85;}
-.card.visited::after{content:"??撌脫蝝?;position:absolute;inset:0;background:rgba(107,63,26,.72);display:flex;align-items:center;justify-content:center;color:var(--yellow);font-size:.95rem;font-weight:900;letter-spacing:3px;backdrop-filter:blur(3px);border-radius:calc(var(--r) - 2px);animation:fadeIn .3s ease;}
+.card.visited::after{content:"???";position:absolute;inset:0;background:rgba(107,63,26,.72);display:flex;align-items:center;justify-content:center;color:var(--yellow);font-size:.95rem;font-weight:900;letter-spacing:3px;backdrop-filter:blur(3px);border-radius:calc(var(--r) - 2px);animation:fadeIn .3s ease;}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 
 /* ?? MODAL OVERLAY ?? */
@@ -60,7 +60,7 @@ header p{position:relative;z-index:1;color:var(--yellow3);font-size:.9rem;margin
 .modal-bullets{list-style:none;margin-bottom:24px;}
 .modal-bullets li{padding:9px 0 9px 28px;position:relative;font-size:.94rem;color:#4a3010;border-bottom:1.5px dashed var(--brown4);line-height:1.6;}
 .modal-bullets li:last-child{border-bottom:none;}
-.modal-bullets li::before{content:"??;position:absolute;left:0;color:var(--yellow2);font-size:.6rem;top:13px;}
+.modal-bullets li::before{content:"?";position:absolute;left:0;color:var(--yellow2);font-size:.6rem;top:13px;}
 
 /* ?? PHOTO SCROLL STRIP ?? */
 .photos-section{margin-bottom:22px;}
