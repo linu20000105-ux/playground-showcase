@@ -147,27 +147,17 @@ body.modal-open{overflow:hidden;}
 
 
 
-.card-name{display:flex;justify-content:center;align-items:flex-start;gap:0;flex-wrap:wrap;line-height:1.1;}
-.card-name ruby,.modal-title ruby{ruby-position:over;}
+
+.card-name{display:block;line-height:1.2;}
+.card-name ruby,.modal-title ruby{
+  ruby-position:inter-character;
+  ruby-align:center;
+}
 .card-name rt,.modal-title rt{
   font-family:"??????? Regular","BopomofoRuby1909-Regular","Noto Sans TC",sans-serif;
-  font-size:.52em;
+  font-size:.56em;
   line-height:1;
   letter-spacing:0;
-  transform:translateY(-0.1em);
 }
 .card-zhuyin,.modal-zhuyin{display:none;}
-.modal-title{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;}
-.modal-title ruby{
-  display:inline-flex;
-  flex-direction:column-reverse;
-  align-items:center;
-  margin-right:.08em;
-}
-.card-name ruby{
-  display:inline-flex;
-  flex-direction:column-reverse;
-  align-items:center;
-  margin-right:.04em;
-}
-.card-name rt{font-size:.62em;}
+.modal-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
